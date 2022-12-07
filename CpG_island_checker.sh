@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# This script calls CpG islands from a file with different sequences where each row is sequence name in column 1 and sequence in column 2. This is useful to check for CpG island in Chip-seq peaks. For compatibility with this script, process the Chip-seq peak bedfile with bedtools getfasta (to obtain sequences) and specify the option -tab to produce a tab-delimited file.
+# Specify your input file as the first argument (e.g. sh CpG_island_check.sh INPUT.txt)
 # Check if the file exists
 if [ ! -f $1 ]; then
   echo "Error: input file does not exist."
